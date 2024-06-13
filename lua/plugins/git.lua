@@ -10,4 +10,10 @@ return {
       { "<leader>gy", "<cmd>GithubLink<cr>", desc = "GithubLink" },
     },
   },
+  {
+    "f-person/git-blame.nvim",
+    -- keys = {
+    --   { "<leader>gu", "<cmd>GitBlameOpenFileURL<cr>", desc = "GitBlameOpenFileURL" },
+    -- },
+  },
 }
