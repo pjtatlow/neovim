@@ -17,7 +17,18 @@ return {
           filetypes = { "graphql", "typescriptreact", "javascriptreact", "typescript", "javascript" },
           root_dir = util.root_pattern(".graphqlrc*", ".graphql.config.*", "graphql.config.*"),
         },
+        prismals = {
+          cmd = { "prisma-language-server", "--stdio" },
+          filetypes = { "prisma" },
+          root_dir = util.root_pattern(".git", "package.json"),
+        },
       },
+      setup = {
+        rust_analyzer = function()
+          return true
+        end,
+      },
+
       -- setup = {
       --   function()
       --     require("lspconfig").graphql.setup({
@@ -26,6 +37,14 @@ return {
       --     return true
       --   end,
       -- },
+    },
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "prisma",
+      },
     },
   },
 }
