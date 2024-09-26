@@ -12,13 +12,17 @@ return {
     priority = 1000,
     opts = {
       flavor = "mocha",
-      -- color_overrides = {
-      --   mocha = {
-      --     base = "#000000",
-      --     mantle = "#000000",
-      --     crust = "#000000",
-      --   },
-      -- },
+      color_overrides = {
+        mocha = {
+          -- base = "#242526",
+          -- mantle = "#2e2e2e",
+          -- text = "#C1C9E6",
+          -- subtext1 = "#A3AAC2",
+          -- subtext0 = "#8E94AB",
+
+          --   crust = "#000000",
+        },
+      },
       integrations = {
         aerial = true,
         alpha = true,

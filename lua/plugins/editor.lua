@@ -5,27 +5,29 @@ return {
   },
   {
     "echasnovski/mini.move",
-    event = "VeryLazy",
-    opts = {
-      -- Module mappings. Use `''` (empty string) to disable one.
-      mappings = {
-        -- Move visual selection in Visual mode. Defaults are Alt (Meta) + hjkl.
-        left = "<M-h>",
-        right = "<M-l>",
-        down = "<M-j>",
-        up = "<M-k>",
-
-        -- Move current line in Normal mode
-        line_left = "<M-h>",
-        line_right = "<M-l>",
-        line_down = "<M-j>",
-        line_up = "<M-k>",
-      },
-
-      -- Options which control moving behavior
-      options = {
-        -- Automatically reindent selection during linewise vertical move
-        reindent_linewise = true,
+  },
+  {
+    "echasnovski/mini.map",
+  },
+  {
+    "MagicDuck/grug-far.nvim",
+    opts = { headerMaxWidth = 80 },
+    cmd = "GrugFar",
+    keys = {
+      {
+        "<leader>sr",
+        function()
+          local grug = require("grug-far")
+          -- local ext = vim.bo.buftype == "" and vim.fn.expand("%:e")
+          grug.open({
+            transient = true,
+            prefills = {
+              -- filesFilter = ext and ext ~= "" and "*." .. ext or nil,
+            },
+          })
+        end,
+        mode = { "n", "v" },
+        desc = "Search and Replace",
       },
     },
   },
