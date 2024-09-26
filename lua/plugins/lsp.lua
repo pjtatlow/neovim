@@ -89,6 +89,15 @@ return {
           root_dir = util.root_pattern(".git", "zig.json"),
           settings = {},
         },
+        vtsls = {
+          settings = {
+            typescript = {
+              tsserver = {
+                maxTsServerMemory = 8192,
+              },
+            },
+          },
+        },
       },
       setup = {
         rust_analyzer = function()
