@@ -67,14 +67,14 @@ return {
     opts = {
       servers = {
         graphql = {
-          cmd = {
-            "tsx",
-            "/Users/pjtatlow/projects/graphql/graphiql/packages/graphql-language-service-cli/src/cli.ts",
-            "server",
-            "-m",
-            "stream",
-          },
-          -- cmd = { "graphql-lsp", "server", "-m", "stream" },
+          -- cmd = {
+          --   "tsx",
+          --   "/Users/pjtatlow/projects/graphql/graphiql/packages/graphql-language-service-cli/src/cli.ts",
+          --   "server",
+          --   "-m",
+          --   "stream",
+          -- },
+          cmd = { "graphql-lsp", "server", "-m", "stream" },
           filetypes = { "graphql", "typescriptreact", "javascriptreact", "typescript", "javascript" },
           root_dir = util.root_pattern(".graphqlrc*", ".graphql.config.*", "graphql.config.*"),
         },
@@ -93,7 +93,7 @@ return {
           settings = {
             typescript = {
               tsserver = {
-                maxTsServerMemory = 8192,
+                maxTsServerMemory = 16384,
               },
             },
           },

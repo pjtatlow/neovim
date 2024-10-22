@@ -10,16 +10,6 @@ return {
       { "<leader>gy", "<cmd>GithubLink<cr>", desc = "GithubLink" },
     },
   },
-  -- {
-  --   "f-person/git-blame.nvim",
-  --
-  --   opts = {
-  --     date_format = "%a %b %d %Y %X",
-  --   },
-  --   -- keys = {
-  --   --   { "<leader>gu", "<cmd>GitBlameOpenFileURL<cr>", desc = "GitBlameOpenFileURL" },
-  --   -- },
-  -- },
   {
     "lewis6991/gitsigns.nvim",
     opts = {
@@ -66,8 +56,5 @@ return {
         map("n", "<leader>tb", gitsigns.toggle_current_line_blame)
       end,
     },
-    -- config = function()
-    --   require("gitsigns").setup()
-    -- end,
   },
 }
